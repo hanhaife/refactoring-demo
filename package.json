@@ -1,0 +1,16 @@
+{
+  "name": "refactoring-demo-1",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "huangxiaolu",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "mocha --experimental-json-modules"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "eslint": "^8.23.1",
+    "mocha": "^10.0.0"
+  }
+}

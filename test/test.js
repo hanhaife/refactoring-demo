@@ -1,10 +1,10 @@
 import assert from 'assert'
 import invoices from '../inputs/invoices.json';
 import plays from '../inputs/plays.json';
-import { statement } from '../src/statement-refactored.js';
+import { statement } from '../src-refactored/statement.js';
 // import { htmlStatement } from '../src/statement-refactored.js';
 
-// import createStatementData from '../src/createStatementData.js';
+import createStatementData from '../src-refactored/createStatementData.js';
 
 describe('Statement', function () {
   it('输入invoices参数，应该得到以下文本输出：', function () {
@@ -32,45 +32,45 @@ You earned 47 credits
 //   });
 // });
 
-// describe('createStatementData', function () {
-//   it('输入invoices参数，应该得到以下结果：', function () {
-//     const expectResult  = {
-//       customer: 'BigCo',
-//       performances: [
-//         {
-//           amount: 65000,
-//           audience: 55,
-//           play: {
-//             name: 'Hamlet',
-//             type: 'tragedy'
-//           },
-//           playID: 'hamlet',
-//           volumeCredits: 25
-//         },
-//         {
-//           amount: 58000,
-//           audience: 35,
-//           play: {
-//             name: 'As You Like It',
-//             type: 'comedy'
-//           },
-//           playID: 'as-like',
-//           volumeCredits: 12
-//         },
-//         {
-//           amount: 50000,
-//           audience: 40,
-//           play: {
-//             name: 'Othello',
-//             type: 'tragedy'
-//           },
-//           playID: 'othello',
-//           volumeCredits: 10
-//         }
-//       ],
-//       totalAmount: 173000,
-//       totalVolumeCredits: 47
-//     }
-//     assert.deepStrictEqual(createStatementData(invoices[0], plays), expectResult);
-//   });
-// });
+describe('createStatementData', function () {
+  it('输入invoices参数，应该得到以下结果：', function () {
+    const expectResult  = {
+      customer: 'BigCo',
+      performances: [
+        {
+          amount: 65000,
+          audience: 55,
+          play: {
+            name: 'Hamlet',
+            type: 'tragedy'
+          },
+          playID: 'hamlet',
+          volumeCredits: 25
+        },
+        {
+          amount: 58000,
+          audience: 35,
+          play: {
+            name: 'As You Like It',
+            type: 'comedy'
+          },
+          playID: 'as-like',
+          volumeCredits: 12
+        },
+        {
+          amount: 50000,
+          audience: 40,
+          play: {
+            name: 'Othello',
+            type: 'tragedy'
+          },
+          playID: 'othello',
+          volumeCredits: 10
+        }
+      ],
+      totalAmount: 173000,
+      totalVolumeCredits: 47
+    }
+    assert.deepStrictEqual(createStatementData(invoices[0], plays), expectResult);
+  });
+});

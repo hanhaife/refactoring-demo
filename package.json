@@ -6,7 +6,18 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "test": "mocha --experimental-json-modules"
+    "test1": "node ./src/extract-function/example-1.js",
+    "test2": "node ./src/inline-function/example-2.js",
+    "test3": "node ./src/extract-variable/example-3.js",
+    "test4": "node ./src/extract-variable/example-4.js",
+    "test5": "node ./src/inline-variable/example-5.js",
+    "test7": "node ./src/change-function-declaration/example-7.js",
+    "test8": "node ./src/change-function-declaration/example-8.js",
+    "test9": "node ./src/encapsulate-variable/example-9.js",
+    "test10": "node ./src/introduce-parameter-object/example-10.js",
+    "test11": "node ./src/combine-functions-into-class/example-11.js",
+    "test12": "node ./src/combine-functions-into-transform/example-12.js",
+    "test13": "node ./src/split-phase/example-13.js"
   },
   "devDependencies": {
     "chai": "^4.3.6",

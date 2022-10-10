@@ -8,8 +8,10 @@ function reportLines(aCustomer) {
 }
 
 function gatherCustomerData(out, aCustomer) {
-  out.push(["name", aCustomer.name]);
-  out.push(["location", aCustomer.location]);
+  const nameLine = ["name", aCustomer.name];
+  const locationLine = ["location", aCustomer.location];
+  out.push(nameLine);
+  out.push(locationLine);
 }
 
 // test

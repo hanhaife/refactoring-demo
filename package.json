@@ -6,8 +6,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "test1": "node ./src/extract-function/example-1.js",
-    "test2": "node ./src/inline-function/example-2.js",
+    "test1": "node ./src/encapsulate-record/example-1.js",
+    "test2": "node ./src/encapsulate-record/example-2.js",
     "test3": "node ./src/extract-variable/example-3.js",
     "test4": "node ./src/extract-variable/example-4.js",
     "test5": "node ./src/inline-variable/example-5.js",
@@ -23,5 +23,8 @@
     "chai": "^4.3.6",
     "eslint": "^8.23.1",
     "mocha": "^10.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }

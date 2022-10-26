@@ -8,16 +8,14 @@
   "scripts": {
     "test1": "node ./src/encapsulate-record/example-1.js",
     "test2": "node ./src/encapsulate-record/example-2.js",
-    "test3": "node ./src/extract-variable/example-3.js",
-    "test4": "node ./src/extract-variable/example-4.js",
-    "test5": "node ./src/inline-variable/example-5.js",
-    "test7": "node ./src/change-function-declaration/example-7.js",
-    "test8": "node ./src/change-function-declaration/example-8.js",
-    "test9": "node ./src/encapsulate-variable/example-9.js",
-    "test10": "node ./src/introduce-parameter-object/example-10.js",
-    "test11": "node ./src/combine-functions-into-class/example-11.js",
-    "test12": "node ./src/combine-functions-into-transform/example-12.js",
-    "test13": "node ./src/split-phase/example-13.js"
+    "test3": "node ./src/encapsulate-collection/example-3.js",
+    "test4": "node ./src/replace-primitive-with-object/example-4.js",
+    "test5": "node ./src/replace-temp-with-query/example-5.js",
+    "test6": "node ./src/extract-class/example-6.js",
+    "test7": "node ./src/inline-class/example-7.js",
+    "test8": "node ./src/hide-delegate/example-8.js",
+    "test9": "node ./src/remove-middle-man/example-9.js",
+    "test10": "node ./src/substitute-algorithm/example-10.js"
   },
   "devDependencies": {
     "chai": "^4.3.6",

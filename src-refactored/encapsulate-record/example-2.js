@@ -1,8 +1,8 @@
 // 封装记录-封装嵌套记录
-// 重构前
+// 重构后
 import _ from 'lodash'
 
-const customerData={
+const Data={
     "1920": {
         name: "martin",
         id: "1920",
@@ -38,12 +38,40 @@ const customerData={
     }
 }
 const amount=10;
+let customerData=null;
+class CustomerData {
+  constructor(data) {
+    this._data = data;
+  }
+  setUsage(customerID, year, month, amount) {
+    this._data[customerID].usages[year][month] = amount;
+  }
+  get rawData() {
+    return _.cloneDeep(this._data);
+  }
+  usage(customerID, year, month) {
+    return this._data[customerID].usages[year][month];
+  }
+}
+function getCustomerData() {
+  return customerData;
+}
+function getRawDataOfCustomers() {
+  return customerData.rawData;
+}
+function setRawDataOfCustomers(arg) {
+  customerData = new CustomerData(arg);
+}
+setRawDataOfCustomers(Data)
+
 //读取的例子
 function compareUsage(customerID, laterYear, month) {
-    const later = customerData[customerID].usages[laterYear][month];
-    const earlier = customerData[customerID].usages[laterYear - 1][month];
-    return { laterAmount: later, change: later - earlier };
+  const later = getCustomerData().rawData[customerID].usages[laterYear][month];
+  const earlier = getCustomerData().rawData[customerID].usages[laterYear - 1][
+    month
+  ];
+  return { laterAmount: later, change: later - earlier };
 }
 //更新的例子
-customerData["1920"].usages["2016"]["1"] = amount;
+getCustomerData().setUsage("1920", "2016", "1", amount);
 console.log(compareUsage("1920","2016","1"))

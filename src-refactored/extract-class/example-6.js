@@ -23,7 +23,7 @@ class TelephoneNumber {
     }
     get number() {return this._officeNumber;}
     set number(arg) {this._officeNumber = arg;}
-    get toString() {return `(${this.officeAreaCode}) ${this.officeNumber}`;}
+    get toString() {return `(${this.areaCode}) ${this.number}`;}
 }
 
 const aPerson=new Person();
